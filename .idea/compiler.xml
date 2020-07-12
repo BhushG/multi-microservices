@@ -2,23 +2,29 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="multi-microservices" />
+        <module name="movie-catalog-service" />
+        <module name="rating-data-service" />
         <module name="movie-info-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="movie-catalog-service" target="1.8" />
       <module name="movie-info-service" target="1.8" />
       <module name="multi-microservices" target="1.8" />
+      <module name="rating-data-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="movie-catalog-service" options="-parameters" />
       <module name="movie-info-service" options="-parameters" />
       <module name="multi-microservices" options="-parameters" />
+      <module name="rating-data-service" options="-parameters" />
     </option>
   </component>
 </project>
