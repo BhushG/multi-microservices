@@ -21,9 +21,9 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>movie-catalog-service</module>
 		<module>movie-info-service</module>
 		<module>rating-data-service</module>
+		<module>movie-catalog-service</module>
 	</modules>
 
 	<dependencies>

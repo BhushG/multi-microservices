@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Movie {
+public class Rating {
+    private String userId;
     private String movieId;
-    private String name;
-    private String description;
+    private float rating;
 }

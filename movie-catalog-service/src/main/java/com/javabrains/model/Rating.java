@@ -2,11 +2,13 @@ package com.javabrains.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-public class Movie {
+@NoArgsConstructor
+public class Rating {
+    private String userId;
     private String movieId;
-    private String name;
-    private String description;
+    private float rating;
 }
