@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: catalog-server
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      config:
+        enabled: true
+        format: files
+        fail-fast: true
+        prefix: catalog-server/develop
+
+server.port: 8084
+
+service:
+  ids:
+    movie: movie-server
+    rating: rating-server
