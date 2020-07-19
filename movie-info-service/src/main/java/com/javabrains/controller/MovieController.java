@@ -14,13 +14,13 @@ import java.util.Optional;
 public class MovieController {
 
     List<Movie> movies = Arrays.asList(new Movie("1", "First Movie", "desc1"),
-                                        new Movie("2", "Second Movie", "desc2"),
-                                        new Movie("3", "Third Movie", "desc3")
-            );
+            new Movie("2", "Second Movie", "desc2"),
+            new Movie("3", "Third Movie", "desc3")
+    );
 
 
     @RequestMapping("/{movieId}")
-    public Optional<Movie> getMovieInfo(@PathVariable  String movieId) {
+    public Optional<Movie> getMovieInfo(@PathVariable String movieId) {
         return movies.stream().filter(m -> m.getMovieId().equalsIgnoreCase(movieId)).findFirst();
     }
 }

@@ -14,17 +14,17 @@ import java.util.stream.Collectors;
 @RequestMapping("ratings")
 public class RatingController {
 
-    List<Rating> ratings = Arrays.asList(new Rating("1","1", 1.5f),
-            new Rating("1","2", 5f),
-            new Rating("1","3", 2f),
-            new Rating("2","1", 4f),
-            new Rating("2","2", 2f),
-            new Rating("3","1", 4.5f));
+    List<Rating> ratings = Arrays.asList(new Rating("1", "1", 1.5f),
+            new Rating("1", "2", 5f),
+            new Rating("1", "3", 2f),
+            new Rating("2", "1", 4f),
+            new Rating("2", "2", 2f),
+            new Rating("3", "1", 4.5f));
 
 
     @RequestMapping("/{userId}")
     public RatingInfo getRating(@PathVariable String userId) {
-        List<Rating> userRatings =  ratings.stream().filter(r -> r.getUserId().equalsIgnoreCase(userId)).collect(Collectors.toList());
+        List<Rating> userRatings = ratings.stream().filter(r -> r.getUserId().equalsIgnoreCase(userId)).collect(Collectors.toList());
 
         return new RatingInfo(userRatings, userRatings.size());
     }
